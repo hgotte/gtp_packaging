@@ -86,7 +86,7 @@ function release:prod {
 }
 
 function publish:test {
-    #try-load-dotenv || true
+    try-load-dotenv || true
     twine upload dist/* \
         --repository testpypi \
         --username=__token__ \
