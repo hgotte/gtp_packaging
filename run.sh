@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -e
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -86,7 +86,7 @@ function release:prod {
 }
 
 function publish:test {
-    try-load-dotenv || true
+    #try-load-dotenv || true
     twine upload dist/* \
         --repository testpypi \
         --username=__token__ \
