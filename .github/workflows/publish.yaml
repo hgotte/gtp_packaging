@@ -16,10 +16,12 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.8
-      - name: Install, build and publish to TestPyPI
+      - name: Install
         run: /bin/bash run.sh install
-          /bin/bash run.sh build
-          /bin/bash run.sh publish:test
+      - name: build
+        run: /bin/bash run.sh build
+      - name: publish to TestPyPI
+        run: /bin/bash run.sh publish:test
         env:
           TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
 
