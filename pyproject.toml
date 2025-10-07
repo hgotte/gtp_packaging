@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 course_demo = ["*.json"]
 
 [project]
-name = "gtp-packaging"
+name = "gtp_packaging-demo"
 authors = [{ name = "Heinz Otte", email = "some-email@gmail.com" }]
 description = "My package description"
 readme = "README.md"
@@ -22,7 +22,7 @@ dynamic = ["version"]
 test = ["pytest", "pytest-cov"]
 release = ["build", "twine"]
 static-code-qa = ["pre-commit"]
-dev = ["gtp_packaging[test,release,static-code-qa]"]
+dev = ["gtp_packaging-demo[test,release,static-code-qa]"]
 
 # docs: https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#dynamic-metadata
 [tool.setuptools.dynamic]
