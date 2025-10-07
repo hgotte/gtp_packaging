@@ -1,5 +1,4 @@
-name: Build, Test, and Publish
-
+name: Build-Test-and-Publish
 on:
     pull_request:
         types: [opened, synchronize]
@@ -17,8 +16,8 @@ jobs:
               uses: actions/setup-python@v3
               with:
                   python-version: 3.8
-              run: |
-                  /bin/bash run.sh install
+            - name: Install, build and publish to TestPyPI
+              run: /bin/bash run.sh install
                   /bin/bash run.sh build
                   /bin/bash run.sh publish:test
               env:
