@@ -1,0 +1,13 @@
+# PYTHONPATH=$PYHONPATH:/home/hgotte/repos/gtp_packaging python my_folder/my_nested_file.py
+# PYTHONPATH=$PYHONPATH:/home/hgotte/repos python my_folder/my_nested_file.py
+import sys
+print(sys.path)
+sys.path.insert(0, '/home/hgotte/repos')
+print(sys.path)
+
+from gtp_packaging.my_other_file import CONSTANT as CONSTANT2
+
+CONSTANT = "Hello"
+
+print(CONSTANT)
+print(CONSTANT2)

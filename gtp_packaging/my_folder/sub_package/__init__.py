@@ -1,0 +1,1 @@
+my_folder.subpackage.some_deeply_nested_file

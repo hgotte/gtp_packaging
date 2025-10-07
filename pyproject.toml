@@ -1,0 +1,11 @@
+[build-system]
+# Minimum requirements for building the project
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "gtp_packaging"
+version = "0.1.0"
+description = "A sample Python project to demonstrate packaging"
+dependencies = [
+    "numpy", "fastapi",
+]
