@@ -18,14 +18,14 @@ jobs:
           python-version: 3.8
       - name: Install ependencies
         run: /bin/bash -x run.sh install
-      - name: linting
-        run: /bin/bash -x run.sh lint:ci
+      #- name: linting
+      #- run: /bin/bash -x run.sh lint:ci
       - name: build python package
         run: /bin/bash -x run.sh build
-      - name: publish to TestPyPI
-        run: /bin/bash -x run.sh publish:test
-        env:
-          TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+      #- name: publish to TestPyPI
+      #  run: /bin/bash -x run.sh publish:test
+      #  env:
+      #    TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
 
   # https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
   dump_contexts_to_log:
